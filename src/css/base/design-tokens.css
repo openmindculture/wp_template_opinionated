@@ -1,0 +1,35 @@
+:root {
+	/* define possible colors and layout constants;
+	 * postcss-custom-properties : preserve: false
+	 * => only export properties that are actually used
+	 */
+
+	/* sizes */
+	/* header, footer etc. will not be wider than a fixed maximum width: */
+	--width-content-max: 1234px;
+	--width-hero-max: calc(var(--width-content-max) - 16px);
+	--gap-default: 1rem;
+
+	/*
+	 * brand colors, typography, preferences
+	 */
+
+	--color-primary: crimson;
+	--color-secondary: rebeccapurple;
+	--background-primary: wheat;
+	--semantic-error: red;
+
+	/* Layers */
+	--z-index-close-button-above-menus: 999;
+
+	/* page content: unset */
+
+	/* Breakpoints by viewport width, compatible to Bootstrap */
+	--grid-breakpoint-xs: 0;
+	--grid-breakpoint-sm: 576px;
+	--grid-breakpoint-md: 768px;
+	--grid-breakpoint-lg: 992px;
+	--grid-breakpoint-xl: 1200px;
+	--grid-breakpoint-xxl: 1400px;
+
+}

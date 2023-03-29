@@ -1,6 +1,6 @@
 {
-	"name": "openmindculture/wordpress-codestyle-sniffer-composer",
-	"description": "CodeSniffer to ensure PHP code follows WordPress coding standards",
+	"name": "openmindculture/wp_template-composer",
+	"description": "ensure PHP version and coding standards",
 	"type": "project",
 	"keywords": [],
 	"repositories": [
@@ -10,12 +10,7 @@
 		}
 	],
 	"require": {
-		"php": "^7.4",
-		"dealerdirect/phpcodesniffer-composer-installer": "^1.0"
-	},
-	"require-dev": {
-		"squizlabs/php_codesniffer": "^3.7.1",
-		"wp-coding-standards/wpcs": "^2.3.0"
+		"php": "^7.4"
 	},
 	"config": {
 		"vendor-dir": "vendor",
@@ -27,7 +22,6 @@
 		}
 	},
 	"extra": {
-		"wordpress-install-dir": "wp_data",
-		"lint": "find src -name '*.php' -exec php -l {} \\;"
+		"wordpress-install-dir": "wp_data"
 	}
 }

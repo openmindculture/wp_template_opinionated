@@ -1,0 +1,20 @@
+/* Content: CTA box elements */
+/* no explicit redundant re-import for linter sake needed
+*
+ */
+
+.wp-site-blocks main,
+.hero {
+	max-width: var(--width-hero-max);
+	border: solid 2px var(--color-primary);
+/*
+	&__image {
+		 object-fit: cover;
+	&::before {
+		 content: "&copy;";
+	 }
+	@media (max-width: var(--grid-breakpoint-sm)) {
+		@include semitransparent(0.5);
+	}
+	*/
+}

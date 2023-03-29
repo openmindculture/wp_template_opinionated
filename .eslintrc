@@ -1,8 +1,10 @@
 {
-	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
+	"env": {
+		"browser": true
+	},
 	"ignorePatterns": [
-		"node_modules/**/*.js",
-		"plugins/**/*.js"
+		"postcss.config.js",
+		"node_modules/**/*.js"
 	],
 	"rules": {
 		"no-var": "off",

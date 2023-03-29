@@ -12,17 +12,14 @@
  Text Domain:  twentytwentythree-child
 */
 
-// @use "sass/base/reset"; /* explicit style reset obsolete in a child theme */
-@import "sass/base/variables"; // global variable namespace
-@import "sass/base/fonts";
-@import "sass/base/typography";
-@import "sass/base/layout";
-
-// Note: always ensure specificity to override parent theme styles!
-// This makes the theme more robust by not relying on the loading order of style files.
+@import url("css/base/base-reset.css");
+@import url("css/base/design-tokens.css");
+@import url("css/base/fonts.css");
+@import url("css/base/typography.scss");
+@import url("css/base/layout.css");
 
 /* add libraries like animate.css here */
 
 /* include atoms, blocks, patterns, ... */
-@import "sass/components/buttons";
-@import "sass/components/ctas";
+@import url("css/components/buttons.css");
+@import url("css/components/ctas.css");

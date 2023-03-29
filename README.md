@@ -1,4 +1,6 @@
-# WordPress Template / Starter Theme Boilerplate
+# WordPress Template / Starter Theme Boilerplate (Pure PostCSS Version)
+
+**TODO: move to a distinct repository!**
 
 [wp_template](https://github.com/openmindculture/wp_template) is a simple local host WordPress setup using Docker, docker-compose, wp-cli, and PostCSS to install, develop, and test themes and plugins. It was forked from [wp_cli_docker](https://github.com/openmindculture/wp_cli_docker). This template can help you build a classic (child) theme from scratch (without exporting from the block editor), that follows the official WordPress coding standards. We can still support and provide custom blocks in our theme.
 
@@ -9,6 +11,12 @@ Roadmap / development: this repository should be kept up to date to reflect the 
 After `1.0.0`, a mostly stable beta releae with SCSS and WordPress code style, I removed both SCSS and WP syntax tools in favor of a more minimal and modern codebase, which is no longer suitable for developing themes or plugins that pass the official review process!
 
 To avoid confusion, I will keep the new codebase in its feature branch or even fork another distinct repository. You can follow the latest work in progress in the [`minimalism-config` feature branch](https://github.com/openmindculture/wp_template/tree/minimalism-config). The new codebase will follow a classic approach, possibly independent of any parent theme, but possibly inspired by Twenty-Twenty-Three and GeneratePress.
+
+See
+- [WP Classic Theme Configuration Variation: Technological Minimalism and Modernism (Issue #1)](https://github.com/openmindculture/wp_template/issues/1)
+- [Vanilla+PostCSS as an Alternative to SCSS](https://dev.to/ingosteinke/css-nesting-and-custom-properties-in-postcss-as-an-alternative-to-scss)
+
+The new template's goal is to write and emit modern, minimalist, and maintainable code following official core language standards and recommendations as closely as possible, striving to emit an accessible, semantic, quick, and cacheable frontend, avoiding controversial full-site-editing and theme engine features without completely giving up the increased versatility and preview features beneficial to non-technical site owners. 
 
 ## Usage
 
@@ -30,8 +38,7 @@ To avoid confusion, I will keep the new codebase in its feature branch or even f
 ### Set Theme name and Target Directory
 
 - Create a subdirectory below `themes` matching your theme name.
-- Open `package.json` and edit `build:core`, `"build:scss:sass:theme`, `build:scss:postcss:theme` etc. accordingly.
-- Edit `build:core` to make sure all necessary files will be exported.
+- Open `package.json` and edit the build targets accordingly to make sure all necessary files will be exported.
 - Edit your `style.css` and `theme.json` to match name, author, version etc.
 
 ### Modify localhost Port and Domain
@@ -79,9 +86,8 @@ FROM wordpress:latest
 ## Child Theme, Block Patterns, and Optional Must-Use-Plugin
 
 - The theme in a subdirectory of `/themes` will be rebuilt when `/src` files have changed.
-- Use (S)CSS and write verbose code in `/src`.
-	- (TODO: remove SCSS from default setup, replace with CSS next syntax using [PostCSS](https://postcss.org))
-	- (TODO: configure PostCSS to support native CSS nesting and other upcoming features, to be exported to compatible fallbacks)
+- Use CSS and write verbose code in `/src`.
+	- You can use some non-standard / future CSS syntax using [PostCSS](https://postcss.org)) and its plugins for extends, import, and nesting, etc.
 	- (TODO: add PHP configuration to remove unnecessary bloat and cargo code like wp-emoji or jQuery)
 - Add or configure other build tools, like minifying or transpiling if needed.
 - Create a zip archive of that subdirectory to export the theme to another WordPress installation.
