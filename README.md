@@ -17,11 +17,6 @@ You can use this template to write and emit modern, minimalist, and maintainable
 
 Technically speaking, his theme provides its own templates and prefers server-side PHP to client-side JavaScript to reduce the negative effects of Gutenberg block editor, trying to prevent inline style attributes and unnecessary client-side rendering, to emit complete documents that can be cached using reverse proxy servers and/or caching / performance plugins.
 
-See
-- [WP Classic Theme Configuration Variation: Technological Minimalism and Modernism (Issue #1)](https://github.com/openmindculture/wp_template/issues/1)
-- [Vanilla+PostCSS as an Alternative to SCSS](https://dev.to/ingosteinke/css-nesting-and-custom-properties-in-postcss-as-an-alternative-to-scss)
-
-
 This repository has been forked from [wp_template](https://github.com/openmindculture/wp_template) which was forked from [wp_cli_docker](https://github.com/openmindculture/wp_cli_docker).
 
 ## Usage
