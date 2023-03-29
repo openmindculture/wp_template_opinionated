@@ -6,6 +6,10 @@
 
 ⚠️ This template is NOT suitable for developing themes or plugins that pass the official WordPress review process!
 
+### TODO / Work in Progress
+
+Currently, this is still a Twenty-Twenty-Three child theme wihout many of the features and changes already mentioned in the documentation.
+
 ## Development Setup
 
 [wp_template_opionated](https://github.com/openmindculture/wp_template_opinionated)
