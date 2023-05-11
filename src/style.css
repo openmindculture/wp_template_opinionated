@@ -2,7 +2,7 @@
  Theme Name:   Twenty-Twenty-Three Child
  Theme URI:    https://github.com/openmindculture/wp_template
  Description:  Child Theme for WordPress
- Author:       Ingo Steinke
+ Author:       openmindculture
  Author URI:   https://www.ingo-steinke.com/
  Template:     twentytwentythree
  Version:      1.2.3
@@ -14,8 +14,9 @@
 
 @import url("css/base/base-reset.css");
 @import url("css/base/design-tokens.css");
+@import url("css/base/mixins.css");
 @import url("css/base/fonts.css");
-@import url("css/base/typography.scss");
+@import url("css/base/typography.css");
 @import url("css/base/layout.css");
 
 /* add libraries like animate.css here */
