@@ -4,20 +4,14 @@ html, body {
 	font-family: 'Foo Bar', sans-serif;
 }
 
-.potato {
-  font-size: 48px;
-  line-height: 1.5;
-  color: crimson;
-}
-
 /* specificity wrapper for Gutenberg block editor preview */
 body div h1 {
-	font-family: 'Baz';
+	font-family: 'Baz', serif;
 	color: var(--color-secondary);
 	margin-bottom: var(--gap-default);
 }
 
-.alignwide {
-  @extend .potato;
+/*noinspection ALL*/
+@mixin heading--h1 .alignwide {
   background-color: whitesmoke;
 }

@@ -7,7 +7,11 @@
     "alpha-value-notation": null,
     "at-rule-empty-line-before": null,
     "at-rule-no-unknown": [true,{
-      "ignoreAtRules": ["extend"]
+      "ignoreAtRules": [
+        "define-mixin",
+        "mixin",
+        "mixin-content"
+      ]
     }],
     "color-function-notation": null,
     "color-hex-length": null,
