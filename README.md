@@ -8,7 +8,11 @@
 
 ### TODO / Work in Progress
 
-Currently, this is still a Twenty-Twenty-Three child theme wihout many of the features and changes already mentioned in the documentation.
+Currently, this is still a Twenty-Twenty-Three child theme wihout many of the features and changes already mentioned in the documentation. Check out [kleiderordnung-berlin](https://github.com/openmindculture/kleiderordnung-berlin) as an example of a standalone classic/hybrid WordPress theme with custom post types and partial block editor support.
+
+The latest preliminary release (1.6.3) uses WordPress 6.3 Release Candidate from their official beta channel.
+
+You can change this in the `FROM` section of the `docker/WordPress*.Dockerfile`.
 
 ## Development Setup
 
@@ -23,10 +27,12 @@ Technically speaking, his theme provides its own templates and prefers server-si
 
 This repository has been forked from [wp_template](https://github.com/openmindculture/wp_template) which was forked from [wp_cli_docker](https://github.com/openmindculture/wp_cli_docker).
 
+If you are looking for an opinionated but minimal block theme instead, have a look at [wp_block_theme_child](https://github.com/openmindculture/wp_block_theme_child) to build a minimal `twentytwentythree-child` block theme using the same dockerized development setup.
+
 ## Usage
 
 - `npm install` initialize and start the development environment
-- `npm start` should start up WordPress on http://localhost:8765/
+- `npm start` should start up WordPress on http://localhost:8631/
 - `npm run build` rebuilds and exports the theme's CSS and PHP files
 - `npm run watch` adds file watcher to automatically rebuild the theme.
 - `npm stop` stops the server without destroying data and configuration.
@@ -48,13 +54,13 @@ This repository has been forked from [wp_template](https://github.com/openmindcu
 
 ### Modify localhost Port and Domain
 
-The server listens on port 8765 by default, so you can enter http://localhost:8765/ to open WordPress in your browser. Modifying the port not only allows you to run multiple local projects at the same time, but it can also prevent browser caching issues between different local WordPress servers and ensure that cross-domain resources, paid plugins or fonts etc. will be displayed correctly.
+The server listens on port 8631 by default, so you can enter http://localhost:8631/ to open WordPress in your browser. Modifying the port not only allows you to run multiple local projects at the same time, but it can also prevent browser caching issues between different local WordPress servers and ensure that cross-domain resources, paid plugins or fonts etc. will be displayed correctly.
 
 You can also set a local domain name that matches your future production server, by adding the domain as a localhost alias in `/etc/hosts` and configuring WordPress to use that domain. A port set to `80` can be omitted in the url, so http://example.com:80/ is equivalent to http://example.com/ and might facilitate testing even more.
 
 Edit the port mapping for the `wordpress:` service in `docker-compose.yml` and change the first value to whatever port you want to use in your browser.
 
-Edit the `installCore` function in `install-local-environment.js` and change `--url=http://localhost:8765"` to the appropriate URL.
+Edit the `installCore` function in `install-local-environment.js` and change `--url=http://localhost:8631"` to the appropriate URL.
 
 Edit `/etc/hosts` and add the local domain alias:
 
@@ -85,7 +91,7 @@ See https://hub.docker.com/_/wordpress/ for available docker tags, or keep `word
 FROM wordpress:latest
 # use other tags in docker/wordpress.Dockerfile to test specific versions, see
 # https://hub.docker.com/_/wordpress/
-# FROM wordpress:6.1.1-php8.0-apache
+# FROM wordpress:beta-6.3-RC2-apache
 ```
 
 ## Custom Content, Block Patterns, and Optional Must-Use-Plugin
@@ -177,4 +183,4 @@ We can provide blocks of our own, that can be composed, reused, and modified by 
 
 ## Troubleshooting
 
-- make sure that there is no other local service listening on port 8765 or configure another port.
+- make sure that there is no other local service listening on port 8631 or configure another port.

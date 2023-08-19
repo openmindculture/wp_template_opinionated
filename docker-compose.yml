@@ -17,9 +17,9 @@ services:
       - db
     build:
       context: .
-      dockerfile: docker/WordPress.Dockerfile
+      dockerfile: docker/WordPress.6.3.Dockerfile
     ports:
-      - "8765:80"
+      - "8631:80"
     restart: on-failure:3
     environment:
       WORDPRESS_DB_HOST: db

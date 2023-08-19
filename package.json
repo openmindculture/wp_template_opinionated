@@ -1,6 +1,6 @@
 {
   "name": "wp_template",
-  "version": "1.0.2",
+  "version": "1.6.3",
   "description": "A simple localhost WordPress setup using Docker, docker-compose, wp-cli, and SCSS to install, develop, and test themes and plugins as a classic (child) theme template / starter theme boilerplate following WP coding standards.",
   "scripts": {
     "start": "docker-compose restart",
