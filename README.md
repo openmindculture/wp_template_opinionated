@@ -1,5 +1,7 @@
 # WordPress Template (opinionated, pure PostCSS Version)
 
+⚠️ This repository is not actively maintained anymore! Please consider [`openmindculture/wp-impact-theme`](https://github.com/openmindculture/wp-impact-theme/) as a more up-to-date template!
+
 ⚠️ **INCOMPATIBLE WITH WORDPRESS CODE STYLE!**
 
 `wp_template_opionated` is a classic theme starter boilerplate for a standalone theme focused on modern coding standards, performance, and accessibility, using future CSS instead of SCSS.
